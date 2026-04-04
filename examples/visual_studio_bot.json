@@ -1,0 +1,1068 @@
+{
+  "webhook_enabled": false,
+  "language": "he",
+  "name": "Converted Bot (Visual)",
+  "type": "tilebot",
+  "attributes": {
+    "variables": {
+      "result": "result",
+      "status": "status",
+      "error": "error",
+      "tiful": "tiful"
+    }
+  },
+  "intents": [
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionType": "replyv2",
+          "_tdActionId": "488421e0-6078-40d0-bac9-ea27e2457e30",
+          "text": "לא הבנתי, אפשר לנסח מחדש?",
+          "attributes": {
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "intent_display_name": "defaultFallback",
+      "intent_id": "0ce8aec3-b442-472d-99cc-bdf8d45e9a68",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 100
+        },
+        "nextBlockAction": {
+          "_tdActionTitle": "",
+          "_tdActionId": "10af1198-375e-43c4-881c-21f27aae5f2e",
+          "_tdActionType": "intent"
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionType": "intent",
+          "intentName": "#d94c02b6-d55a-474b-b298-33d85885dd25",
+          "_tdActionId": "4810b994-505c-451f-a74e-8d0db0e9989e"
+        }
+      ],
+      "intent_display_name": "start",
+      "intent_id": "ac103438-0105-451d-9f60-2d7b674b357a",
+      "question": "\\start",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 300
+        },
+        "nextBlockAction": {
+          "_tdActionTitle": "",
+          "_tdActionId": "e8568a52-79c3-4d3c-9e8d-4394b6024ab9",
+          "_tdActionType": "intent"
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "bedee3e2-024e-4a84-9105-09986efab689",
+          "_tdActionType": "replyv2",
+          "text": "",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "5a5670fd-aafa-4265-b6f6-c178fe2aa6ec",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send List",
+      "intent_id": "aa540fbb-a93e-4408-8c4c-7fa9ab951d55",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 500
+        },
+        "nextBlockAction": {
+          "_tdActionId": "93e5bd94-4655-4b72-8d34-e5dd731be83f",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "f3af0070-70db-450a-bfee-ac857944021d",
+          "_tdActionType": "replyv2",
+          "text": "",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "fa06dff7-4494-493a-9d88-78c2b185f7d4",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": "Send Buttons",
+      "intent_id": "51ad4fc8-63ca-49ff-b11d-2dd5b5ac5bd0",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 750
+        },
+        "nextBlockAction": {
+          "_tdActionId": "17207e4c-06c4-4b65-9b95-3224ea4e970d",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "5f569699-8170-4f19-b311-f6538aa685d8",
+          "_tdActionType": "replyv2",
+          "text": "",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "a356d13e-67cb-41c4-bbb0-73f69dceb3d3",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send Message",
+      "intent_id": "cdd90224-8601-40fa-a45d-106d4deacaa9",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 1000
+        },
+        "nextBlockAction": {
+          "_tdActionId": "eeccd643-d056-4eb5-8541-420858756311",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "5ffbb94c-f873-4f36-82b5-a89d2b0cf6c4",
+          "_tdActionType": "replyv2",
+          "text": "היי! תודה שפנית לברק שירותים\nבמה נוכל לעזור?",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "היי! תודה שפנית לברק שירותים\nבמה נוכל לעזור?",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": [
+                        {
+                          "uid": "40eefdd2-771c-4098-9292-99120e728924",
+                          "type": "action",
+                          "value": "עובד חדש",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#e03327c5-175c-44c6-a34e-4a1d3f024b5a",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "dc926403-9bb3-4b14-bd00-c5d5831e39c1",
+                          "type": "action",
+                          "value": "עובד קיים",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#734c0119-4214-4e39-8cb2-d05bfd8c4e38",
+                          "show_echo": true,
+                          "alias": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        }
+      ],
+      "intent_display_name": "Main Menu",
+      "intent_id": "9772d248-e618-4f50-8c96-305239ed4282",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 1250
+        },
+        "nextBlockAction": {
+          "_tdActionId": "a722dfa6-b283-46a4-a2cc-71af8d379e75",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "3baf1994-16f7-4abc-bb9a-df8ba178868a",
+          "_tdActionType": "replyv2",
+          "text": "ברוכים הבאים לברק שירותים באילת!\nכדי שנתאים לך את העבודה שהכי מתאימה לך אשמח לכמה פרטים קטנים\n\nנא לצרף בהודעה חוזרת את הפרטים הבאים:\n1.איך קוראים לך?\n2.מאיפה בארץ את/ה מגיע/ה?\n3.מה סוג העבודה שאת/ה מחפש/ת (מלונאות, מטבח,מכירות וכו') ?\n\n*ניתן לצרף קורות חיים מעודכנים.\n\nאחרי שנקבל את הפרטים נחזור אלייך עם משרות פנויות שמתאימות במיוחד לך.\n\nאפשר להכיר אותנו באתר:",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "ברוכים הבאים לברק שירותים באילת!\nכדי שנתאים לך את העבודה שהכי מתאימה לך אשמח לכמה פרטים קטנים\n\nנא לצרף בהודעה חוזרת את הפרטים הבאים:\n1.איך קוראים לך?\n2.מאיפה בארץ את/ה מגיע/ה?\n3.מה סוג העבודה שאת/ה מחפש/ת (מלונאות, מטבח,מכירות וכו') ?\n\n*ניתן לצרף קורות חיים מעודכנים.\n\nאחרי שנקבל את הפרטים נחזור אלייך עם משרות פנויות שמתאימות במיוחד לך.\n\nאפשר להכיר אותנו באתר:",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": [
+                        {
+                          "uid": "59fe07c1-f57e-4a5a-8434-9ab1ec32e22f",
+                          "type": "action",
+                          "value": "לאתר שלנו לחץ כאן",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "d4c69f0c-c856-4513-ad6b-e41f3c28ed0d",
+                          "type": "action",
+                          "value": "=https://www.eilatjobs.com",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        }
+      ],
+      "intent_display_name": "Send Buttons1",
+      "intent_id": "e03327c5-175c-44c6-a34e-4a1d3f024b5a",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 1500
+        },
+        "nextBlockAction": {
+          "_tdActionId": "7a238894-87e6-4084-bd85-d7cfe96942b9",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "35f50b86-bbbb-4539-b007-6bc84801f0fa",
+          "_tdActionType": "replyv2",
+          "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בהקדם עם משרות פנויות שהכי מתאימות  בעבורך.",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בהקדם עם משרות פנויות שהכי מתאימות  בעבורך.",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "2607d013-b4db-4216-9300-b21f9fc3c638",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send Message1",
+      "intent_id": "16c956be-ca7a-4ce6-8883-cf996aac8f3a",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 1750
+        },
+        "nextBlockAction": {
+          "_tdActionId": "9d70f1b2-27fe-43f7-a6b7-18b8d960ebc9",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "14f44f28-1517-4dc2-9957-c1c43502376b",
+          "_tdActionType": "replyv2",
+          "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בשעות הפעילות עם משרות פנויות שהכי מתאימות  בעבורך.\n\nשעות הפעילות שלנו הן:\nא-ה 08:00-20:00\nו  08:00-14:00",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בשעות הפעילות עם משרות פנויות שהכי מתאימות  בעבורך.\n\nשעות הפעילות שלנו הן:\nא-ה 08:00-20:00\nו  08:00-14:00",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "8f4f6a7d-c6c7-4b94-9864-78b8eceafbc6",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send Message2",
+      "intent_id": "dc2e6700-ba77-4035-9bbf-d9a20c4c3538",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 200,
+          "y": 2000
+        },
+        "nextBlockAction": {
+          "_tdActionId": "d594ab59-c8e2-4387-92c3-2df004bb7aab",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "76df0d81-b880-43c1-9b07-290755ca946e",
+          "_tdActionType": "replyv2",
+          "text": "ברוכים הבאים לברק שירותים באילת!\nאנא את השירות שהכי מתאים לך:",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "ברוכים הבאים לברק שירותים באילת!\nאנא את השירות שהכי מתאים לך:",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": [
+                        {
+                          "uid": "56aa9362-f070-49e1-9d8a-3a0ab3e7f8a9",
+                          "type": "action",
+                          "value": "תפעול",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#8f91c37c-ad14-47e5-8861-5bd5754460a4",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "d6106a76-deeb-4a3f-8b37-0d7865dc4bc3",
+                          "type": "action",
+                          "value": "דיור",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#788264b9-4d35-4f22-8528-1855e4e4b3a8",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "d06738d7-07b2-447c-bffd-d676511bea4a",
+                          "type": "action",
+                          "value": "שכר",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#2bfa34b3-e7d8-4d32-86cc-8fb2a7dc44d4",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "e1ddaa09-79ea-4ad5-be5c-bf589a869d21",
+                          "type": "action",
+                          "value": "בחזרה לתפריט ראשי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#9772d248-e618-4f50-8c96-305239ed4282",
+                          "show_echo": true,
+                          "alias": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        }
+      ],
+      "intent_display_name": "Send List",
+      "intent_id": "734c0119-4214-4e39-8cb2-d05bfd8c4e38",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 500
+        },
+        "nextBlockAction": {
+          "_tdActionId": "9bd2910f-61f4-4a2f-a0c9-5c0d23e8054d",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "9f4f935f-1b32-4f7f-a9bf-4ea78b844c42",
+          "_tdActionType": "replyv2",
+          "text": "תפעול - ברק שירותים\nכדי שנוכל לעזור לך הכי מהר אנא בחר/י את השירות שהכי מתאים לך:",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "תפעול - ברק שירותים\nכדי שנוכל לעזור לך הכי מהר אנא בחר/י את השירות שהכי מתאים לך:",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": [
+                        {
+                          "uid": "958a97df-eb5d-458a-bab3-7e8594d64017",
+                          "type": "action",
+                          "value": "שעות עבודה",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "28a9b896-f858-4009-ad02-086c4a298f9b",
+                          "type": "action",
+                          "value": "ציוד",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "14c5abea-eb68-40c4-9868-b5bb9c89ca3e",
+                          "type": "action",
+                          "value": "משמרות",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "95df1cbc-e3b2-4133-bb50-4faa47a89808",
+                          "type": "action",
+                          "value": "כללי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "1f583764-0cc0-406d-8cb9-a2ebec3fb212",
+                          "type": "action",
+                          "value": "סיום עבודה",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "112fe7a5-6023-4dcf-abd2-3332d12900bc",
+                          "type": "action",
+                          "value": "בחזרה לתפריט ראשי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#9772d248-e618-4f50-8c96-305239ed4282",
+                          "show_echo": true,
+                          "alias": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        }
+      ],
+      "intent_display_name": "Send List1",
+      "intent_id": "8f91c37c-ad14-47e5-8861-5bd5754460a4",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 750
+        },
+        "nextBlockAction": {
+          "_tdActionId": "f8d30f1d-5b0e-4319-99c5-4720aa8d90fe",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "afdc0ba9-e68e-497a-bbee-e2590a4e5a95",
+          "_tdActionType": "replyv2",
+          "text": "דיור- ברק שירותים\nכדי שנוכל לעזור לך הכי מהר אנא בחר/י את השירות שהכי מתאים לך:",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "דיור- ברק שירותים\nכדי שנוכל לעזור לך הכי מהר אנא בחר/י את השירות שהכי מתאים לך:",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": [
+                        {
+                          "uid": "b6a16b81-9107-4921-be81-61f45db6158f",
+                          "type": "action",
+                          "value": "בעיות בחדרים",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "d61e2778-90f4-4d4f-be0e-8c7ccba6d2f1",
+                          "type": "action",
+                          "value": "העברות",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "6cf3e888-5226-44d4-9f30-6fce300d7607",
+                          "type": "action",
+                          "value": "תחזוקה",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "46d69f57-4e72-4821-95fa-df23b625ba8a",
+                          "type": "action",
+                          "value": "כללי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "a2599a84-73b8-4310-8941-68839412efad",
+                          "type": "action",
+                          "value": "בחזרה לתפריט ראשי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#9772d248-e618-4f50-8c96-305239ed4282",
+                          "show_echo": true,
+                          "alias": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        }
+      ],
+      "intent_display_name": "Send List2",
+      "intent_id": "788264b9-4d35-4f22-8528-1855e4e4b3a8",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 1000
+        },
+        "nextBlockAction": {
+          "_tdActionId": "a1f554c9-3289-43c5-9253-44a8d1673279",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "6b68a318-5dd9-4564-b846-6dc4190f0e71",
+          "_tdActionType": "replyv2",
+          "text": "שכר- ברק שירותים\nכדי שנוכל לעזור לך הכי מהר אנא בחר/י את השירות שהכי מתאים לך:",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "שכר- ברק שירותים\nכדי שנוכל לעזור לך הכי מהר אנא בחר/י את השירות שהכי מתאים לך:",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": [
+                        {
+                          "uid": "d91ad55c-6563-4b51-a8a0-d5f260b90c2f",
+                          "type": "action",
+                          "value": "תלושים",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "e4259c20-786b-45ef-9ee7-f8fd5987357a",
+                          "type": "action",
+                          "value": "העברות",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "3ee73188-7c7f-40ea-a1a7-19b9be7c6ebe",
+                          "type": "action",
+                          "value": "בירור כספים",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "60004073-8eb8-439d-980c-5d07d06d9d9a",
+                          "type": "action",
+                          "value": "כללי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "",
+                          "show_echo": true,
+                          "alias": ""
+                        },
+                        {
+                          "uid": "242899cf-4440-425a-a79d-e757a5d9d2c8",
+                          "type": "action",
+                          "value": "בחזרה לתפריט ראשי",
+                          "link": "",
+                          "target": "blank",
+                          "action": "#9772d248-e618-4f50-8c96-305239ed4282",
+                          "show_echo": true,
+                          "alias": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        }
+      ],
+      "intent_display_name": "Send List3",
+      "intent_id": "2bfa34b3-e7d8-4d32-86cc-8fb2a7dc44d4",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 1250
+        },
+        "nextBlockAction": {
+          "_tdActionId": "eb4ce166-6e41-491d-bc74-b217c0453c3b",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "39fdc4c9-76db-4e83-b41d-ad356c355af1",
+          "_tdActionType": "replyv2",
+          "text": "אנא תאר/י את סיבת הפניה. בפנייתך כלול/י את המידע הבא:\n1.שם מלא\n2.מקום עבודה\n3.סיבת הפניה",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "אנא תאר/י את סיבת הפניה. בפנייתך כלול/י את המידע הבא:\n1.שם מלא\n2.מקום עבודה\n3.סיבת הפניה",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "5f11f421-76c6-4983-8734-b126d5455454",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send Message3",
+      "intent_id": "f6298faf-9a59-4bf3-a13d-2aa702e41c42",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 1500
+        },
+        "nextBlockAction": {
+          "_tdActionId": "1f5f3264-2760-4189-80cc-0f4471325327",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "e816d39b-8160-48e0-aad7-7826e5a7bd27",
+          "_tdActionType": "replyv2",
+          "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בהקדם עם משרות פנויות שהכי מתאימות  בעבורך.",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בהקדם עם משרות פנויות שהכי מתאימות  בעבורך.",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "23f178a4-fcc8-4e87-8031-94460e45a929",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send Message4",
+      "intent_id": "9d0fa407-e0a2-491b-a752-95b99b4a3082",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 1750
+        },
+        "nextBlockAction": {
+          "_tdActionId": "9f19384e-7d44-459b-a83d-7a3d7978d51d",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    },
+    {
+      "webhook_enabled": false,
+      "enabled": true,
+      "actions": [
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "7d96c4a8-3a86-4feb-ae27-a84d422bcf63",
+          "_tdActionType": "replyv2",
+          "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בשעות הפעילות עם משרות פנויות שהכי מתאימות  בעבורך.\n\nשעות הפעילות שלנו הן:\nא-ה 08:00-20:00\nו  08:00-14:00",
+          "attributes": {
+            "disableInputMessage": false,
+            "commands": [
+              {
+                "type": "wait",
+                "time": 500
+              },
+              {
+                "type": "message",
+                "message": {
+                  "type": "text",
+                  "text": "שמחים שהשארת פרטים!\nנציגנו יחזרו אלייך בשעות הפעילות עם משרות פנויות שהכי מתאימות  בעבורך.\n\nשעות הפעילות שלנו הן:\nא-ה 08:00-20:00\nו  08:00-14:00",
+                  "attributes": {
+                    "attachment": {
+                      "type": "template",
+                      "buttons": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "noInputTimeout": 10000
+        },
+        {
+          "_tdActionTitle": "",
+          "_tdActionId": "536f7d1b-b437-4e87-a5f6-4818c223b74a",
+          "_tdActionType": "capture_user_reply",
+          "assignResultTo": "lastUserText"
+        }
+      ],
+      "intent_display_name": " Send Message5",
+      "intent_id": "d026f6a8-1824-4736-a9e3-4f0c0c8cffa9",
+      "language": "he",
+      "attributes": {
+        "position": {
+          "x": 600,
+          "y": 2000
+        },
+        "nextBlockAction": {
+          "_tdActionId": "f3db57bd-dec3-4d38-85a0-2350af0e0ca7",
+          "_tdActionType": "intent",
+          "intentName": null
+        }
+      }
+    }
+  ]
+}
