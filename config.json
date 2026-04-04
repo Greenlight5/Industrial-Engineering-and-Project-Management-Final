@@ -1,0 +1,12 @@
+{
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o"
+  },
+  "output_dir": "./output",
+  "examples_dir": "./examples",
+  "agent2": {
+    "max_retries": 2,
+    "temperature": 0.2
+  }
+}
