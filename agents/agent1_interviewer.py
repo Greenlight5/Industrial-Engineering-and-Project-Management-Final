@@ -23,6 +23,67 @@ QUESTIONS = [
     ("additional_notes",     "Any other requirements or specific behaviors? (press Enter to skip)"),
 ]
 
+# Optional fields that are allowed to be empty / skipped
+OPTIONAL_FIELDS = {"additional_notes"}
+
+# Maximum number of follow-up clarification attempts per question
+MAX_FOLLOW_UPS = 2
+
+_VALIDATION_SYSTEM = """\
+You are validating answers in a business requirements interview for building a WhatsApp chatbot.
+Decide whether the user's answer provides enough useful information for the specific question asked.
+
+An answer is INVALID if it is:
+- Completely empty or only whitespace
+- A non-answer ("idk", "skip", "whatever", "something") for a required field
+- Completely off-topic or unrelated to the question
+- So vague it gives zero actionable information (e.g. answering "yes" or "nice" to a question that needs specifics)
+
+An answer is VALID if it provides any reasonable, relevant information — even if brief.
+
+Respond with JSON only, no markdown:
+{
+  "valid": true | false,
+  "follow_up": "<a short, specific guiding question to get better information>" | null
+}
+The "follow_up" key must be null when valid is true.\
+"""
+
+
+def validate_answer(field: str, question: str, answer: str, llm: LLMClient) -> dict:
+    """Use LLM to check whether *answer* is relevant and sufficient for *question*.
+
+    Returns a dict with keys:
+      - ``valid`` (bool): True if the answer is usable.
+      - ``follow_up`` (str | None): A guiding follow-up question when not valid.
+    """
+    if field in OPTIONAL_FIELDS:
+        return {"valid": True, "follow_up": None}
+
+    if not answer or not answer.strip():
+        return {
+            "valid": False,
+            "follow_up": f"Could you please provide an answer for: {question}",
+        }
+
+    user_msg = (
+        f"Question field: {field}\n"
+        f"Question asked: {question}\n"
+        f"User's answer: {answer}\n\n"
+        "Is this answer useful for building a WhatsApp chatbot?"
+    )
+
+    raw = llm.chat(_VALIDATION_SYSTEM, user_msg, temperature=0.1)
+    raw = _extract_json(raw)
+    try:
+        result = json.loads(raw)
+        return {
+            "valid": bool(result.get("valid", True)),
+            "follow_up": result.get("follow_up"),
+        }
+    except Exception:
+        return {"valid": True, "follow_up": None}
+
 
 def run(llm: LLMClient) -> RequirementsModel:
     console.print(Panel(
@@ -35,8 +96,19 @@ def run(llm: LLMClient) -> RequirementsModel:
     answers: dict[str, str] = {}
     for i, (field, question) in enumerate(QUESTIONS, 1):
         console.print(f"\n[bold yellow][{i}/{len(QUESTIONS)}][/bold yellow] {question}")
-        answer = Prompt.ask("[green]>[/green]")
-        answers[field] = answer.strip()
+        answer = Prompt.ask("[green]>[/green]").strip()
+        answers[field] = answer
+
+        for attempt in range(MAX_FOLLOW_UPS):
+            validation = validate_answer(field, question, answers[field], llm)
+            if validation["valid"]:
+                break
+            follow_up_q = validation.get("follow_up") or f"Could you elaborate on: {question}"
+            console.print(f"\n[yellow]I need a bit more information.[/yellow]")
+            console.print(f"[bold cyan]{follow_up_q}[/bold cyan]")
+            extra = Prompt.ask("[green]>[/green]").strip()
+            if extra:
+                answers[field] = answers[field] + "\n" + extra if answers[field] else extra
 
     console.print("\n[bold blue]Compiling requirements...[/bold blue]")
 
@@ -93,14 +165,12 @@ def compile_requirements(answers: dict[str, str], llm: LLMClient) -> Requirement
 
 def _extract_json(text: str) -> str:
     text = text.strip()
-    # Strip markdown code fences if present
     if text.startswith("```"):
         lines = text.splitlines()
         lines = lines[1:]
         if lines and lines[-1].strip() == "```":
             lines = lines[:-1]
         text = "\n".join(lines)
-    # Extract the outermost JSON object
     start = text.find("{")
     end = text.rfind("}") + 1
     if start != -1 and end > start:
